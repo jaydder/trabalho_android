@@ -24,13 +24,6 @@ public class LoginDatabase extends SQLiteOpenHelper {
                 "password TEXT NOT NULL)";
         sqLiteDatabase.execSQL(sql);
 
-
-        sql = "INSERT INTO user(name,password)" +
-                " VALUES('jaydder','admin')";
-
-        Log.d("db", sql);
-        sqLiteDatabase.execSQL(sql);
-
     }
 
     @Override

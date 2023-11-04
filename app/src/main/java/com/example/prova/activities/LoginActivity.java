@@ -1,4 +1,4 @@
-package com.example.prova;
+package com.example.prova.activities;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Window;
 
+import com.example.prova.R;
 import com.example.prova.db.LoginDatabase;
 import com.example.prova.model.User;
 
@@ -27,8 +28,6 @@ public class LoginActivity extends AppCompatActivity {
         user.setName("admin");
         user.setPassword("admin");
         login_db.add_user(user);
-
-
 
 
     }

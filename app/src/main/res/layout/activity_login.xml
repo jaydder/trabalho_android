@@ -7,7 +7,7 @@
     android:baselineAligned="false"
     android:gravity="center"
     android:background="#00BCD4"
-    tools:context=".LoginActivity">
+    tools:context=".activities.LoginActivity">
 
     <LinearLayout
         android:layout_width="358dp"

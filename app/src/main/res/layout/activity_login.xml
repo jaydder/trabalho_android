@@ -16,7 +16,9 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        android:gravity="center"
+        >
 
         <TextView
             android:id="@+id/textView"
@@ -26,7 +28,7 @@
             android:text="@string/login_bunda"
             android:textSize="34sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/editTextText"
+            app:layout_constraintBottom_toTopOf="@+id/Logintext"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
@@ -34,42 +36,53 @@
             app:layout_constraintVertical_bias="0.23" />
 
         <EditText
-            android:id="@+id/editTextText"
+            android:id="@+id/Logintext"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="40dp"
+            android:autofillHints=""
             android:ems="10"
             android:hint="@string/username"
             android:inputType="text"
-            app:layout_constraintBottom_toTopOf="@+id/editTextText2"
+            android:minHeight="48dp"
+            app:layout_constraintBottom_toTopOf="@+id/PasswordText"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.497"
-            app:layout_constraintStart_toStartOf="parent"
-            android:autofillHints="" />
+            app:layout_constraintStart_toStartOf="parent" />
 
         <EditText
-            android:id="@+id/editTextText2"
+            android:id="@+id/PasswordText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="84dp"
+            android:autofillHints=""
             android:ems="10"
             android:hint="@string/password"
             android:inputType="text"
-            app:layout_constraintBottom_toTopOf="@+id/button"
+            android:minHeight="48dp"
+            app:layout_constraintBottom_toTopOf="@+id/LoginButton"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.497"
-            app:layout_constraintStart_toStartOf="parent"
-            android:autofillHints="" />
+            app:layout_constraintStart_toStartOf="parent" />
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/LoginButton"
             android:layout_width="178dp"
             android:layout_height="48dp"
             android:layout_marginBottom="172dp"
-            android:text="@string/button"
+            android:onClick="Logar"
+            android:text="Login"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/CadButton"
+            android:layout_width="156dp"
+            android:layout_height="wrap_content"
+            android:onClick="Cadastrar"
+            android:text="Cadastrar-se" />
+
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

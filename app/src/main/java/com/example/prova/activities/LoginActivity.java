@@ -26,10 +26,6 @@ public class LoginActivity extends AppCompatActivity {
         actionBar.hide();
 
         login_db = new LoginDatabase(this);
-        User user = new User();
-        user.setName("marcelo");
-        user.setPassword("123");
-        login_db.add_user(user);
     }
 
     public void Logar(View view) {

@@ -7,11 +7,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.prova.R;
-import com.example.prova.db.LoginDatabase;
+import com.example.prova.db.UserDatabase;
 import com.example.prova.model.User;
 
 public class CadastroActivity extends AppCompatActivity {
@@ -19,7 +18,7 @@ public class CadastroActivity extends AppCompatActivity {
     EditText name;
     EditText password;
     Button login;
-    LoginDatabase lg_db;
+    UserDatabase lg_db;
     User user;
 
 
@@ -39,7 +38,7 @@ public class CadastroActivity extends AppCompatActivity {
                 String name_text = name.getText().toString();
                 String password_text = password.getText().toString();
 
-                lg_db = new LoginDatabase(getApplicationContext());
+                lg_db = new UserDatabase(getApplicationContext());
                 user = new User();
                 user.setName(name_text);
                 user.setPassword(password_text);

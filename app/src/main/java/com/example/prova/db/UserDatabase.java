@@ -10,18 +10,20 @@ import androidx.annotation.Nullable;
 
 import com.example.prova.model.User;
 
-public class LoginDatabase extends SQLiteOpenHelper {
+public class UserDatabase extends SQLiteOpenHelper {
 
-    public LoginDatabase(@Nullable Context context) {
+    public UserDatabase(@Nullable Context context) {
         super(context, "PIX_DB", null, 1);
     }
 
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
         String sql = "CREATE TABLE user(" +
-                "ID INTERGER PRIMARY KEY," +
+                "ID INTEGER PRIMARY KEY," +
                 "name TEXT NOT NULL," +
-                "password TEXT NOT NULL)";
+                "password TEXT NOT NULL," +
+                "cpf TEXT," +
+                "celular TEXT)";
         sqLiteDatabase.execSQL(sql);
 
     }
@@ -31,21 +33,22 @@ public class LoginDatabase extends SQLiteOpenHelper {
 
     }
 
-    public void add_user(User user){
+    public void add_user(User user) {
         String sql = "INSERT INTO user (name, password)" +
                 " VALUES('" + user.getName() + "','" +
                 user.getPassword() + "')";
-        Log.i("db","sql insert usuario: " + sql);
+        Log.i("db", "sql insert usuario: " + sql);
         getWritableDatabase().execSQL(sql);
     }
-    public boolean logar(String name,String password){
 
-        String sql ="select * from user " +
+    public boolean logar(String name, String password) {
+
+        String sql = "select * from user " +
                 " where name = '" + name + "' and " +
-                " password = '" + password +"'";
+                " password = '" + password + "'";
 
         Cursor cursor = getReadableDatabase()
-                .rawQuery(sql,null);
+                .rawQuery(sql, null);
         return cursor.getCount() > 0 ? true : false;
     }
 }

@@ -10,12 +10,11 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.prova.R;
-import com.example.prova.db.LoginDatabase;
-import com.example.prova.model.User;
+import com.example.prova.db.UserDatabase;
 
 public class LoginActivity extends AppCompatActivity {
 
-    LoginDatabase login_db;
+    UserDatabase login_db;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,7 +24,7 @@ public class LoginActivity extends AppCompatActivity {
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
 
-        login_db = new LoginDatabase(this);
+        login_db = new UserDatabase(this);
     }
 
     public void Logar(View view) {
@@ -36,7 +35,12 @@ public class LoginActivity extends AppCompatActivity {
                        Password.getText().toString());
 
         if(eLoginSucesso){
+            Bundle bundle = new Bundle();
+            bundle.putString("login",Login.getText().toString());
+
             Intent intent = new Intent(this,DashBoardActivity.class);
+            intent.putExtras(bundle);
+
             startActivity(intent);
 
         }else{

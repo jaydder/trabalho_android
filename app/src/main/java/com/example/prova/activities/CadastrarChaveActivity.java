@@ -12,6 +12,7 @@ import android.widget.Spinner;
 import com.example.prova.R;
 import com.example.prova.db.UserDatabase;
 import com.example.prova.model.User;
+import com.example.prova.model.UserDates;
 
 import java.util.List;
 
@@ -48,11 +49,21 @@ public class CadastrarChaveActivity extends AppCompatActivity {
 
         User user = new User();
 
+        UserDates userdt = new UserDates();
+        String types_keys = null;
+        String value_key = null;
+
         if (spinner.getSelectedItem().equals("CPF")){
-            user.setCpf(chave_text);
+            types_keys = "cpf";
+            value_key = chave_text;
         } else {
-            user.setCelular(Integer.parseInt(chave_text));
+            types_keys = "celular";
+            value_key = chave_text;
         }
+
+        db.set_keys(userdt.user.getId(), types_keys, value_key);
+
+
 
 
 

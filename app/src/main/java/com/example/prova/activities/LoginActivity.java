@@ -11,6 +11,10 @@ import android.widget.Toast;
 
 import com.example.prova.R;
 import com.example.prova.db.UserDatabase;
+import com.example.prova.model.User;
+import com.example.prova.model.UserDates;
+
+import java.util.Objects;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -30,16 +34,17 @@ public class LoginActivity extends AppCompatActivity {
     public void Logar(View view) {
         EditText Login = findViewById(R.id.Logintext);
         EditText Password = findViewById(R.id.PasswordText);
-        boolean eLoginSucesso = login_db
-                .logar(Login.getText().toString(),
-                       Password.getText().toString());
+        User user = login_db.login(Login.getText().toString(), Password.getText().toString());
 
-        if(eLoginSucesso){
+        if(Objects.nonNull(user)){
             Bundle bundle = new Bundle();
             bundle.putString("login",Login.getText().toString());
 
             Intent intent = new Intent(this,DashBoardActivity.class);
             intent.putExtras(bundle);
+
+          //  login_db.get_user_dates(Login.getText().toString());
+            UserDates.user = user;
 
             startActivity(intent);
 

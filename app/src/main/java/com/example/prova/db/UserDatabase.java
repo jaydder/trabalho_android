@@ -1,14 +1,19 @@
 package com.example.prova.db;
 
+import android.adservices.customaudience.JoinCustomAudienceRequest;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.service.autofill.UserData;
 import android.util.Log;
 
 import androidx.annotation.Nullable;
 
 import com.example.prova.model.User;
+import com.example.prova.model.UserDates;
+
+import java.util.List;
 
 public class UserDatabase extends SQLiteOpenHelper {
 
@@ -41,7 +46,7 @@ public class UserDatabase extends SQLiteOpenHelper {
         getWritableDatabase().execSQL(sql);
     }
 
-    public boolean logar(String name, String password) {
+    public User login(String name, String password) {
 
         String sql = "select * from user " +
                 " where name = '" + name + "' and " +
@@ -49,7 +54,29 @@ public class UserDatabase extends SQLiteOpenHelper {
 
         Cursor cursor = getReadableDatabase()
                 .rawQuery(sql, null);
-        return cursor.getCount() > 0 ? true : false;
+        User usuario = null;
+        Log.d("DBp===", "usuario cirado");
+        for(int i=0; i < cursor.getCount(); i++ ){
+            usuario = new User();
+
+            Log.d("DB",cursor.getString(1));
+            usuario.setId(cursor.getInt(0));
+            usuario.setName(cursor.getString(1));
+            usuario.setPassword(cursor.getString(2));
+            cursor.moveToNext();
+        }
+
+        return usuario;
     }
+
+    public void set_keys(int id, String type, String key_value) {
+        String sql = "UPDATE user SET '"+
+                type + "'='" + key_value +
+                "' where ID = "+ id ;
+        Log.i("db", "sql insert usuario: " + sql);
+        getWritableDatabase().execSQL(sql);
+    }
+
+
 }
 

@@ -1,5 +1,7 @@
 package com.example.prova.model;
 
+import android.util.Log;
+
 import java.io.Serializable;
 
 public class User implements Serializable {
@@ -8,6 +10,8 @@ public class User implements Serializable {
 
     private String cpf;
     private int celular;
+
+    private Integer id;
 
     public String getCpf() {
         return cpf;
@@ -39,5 +43,14 @@ public class User implements Serializable {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        Log.d("DB",id.toString());
+        this.id = id;
     }
 }

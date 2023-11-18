@@ -58,7 +58,6 @@ public class User implements Serializable {
     }
 
     public void setId(Integer id) {
-        Log.d("DB",id.toString());
         this.id = id;
     }
 }

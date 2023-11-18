@@ -13,7 +13,7 @@ import com.example.prova.R;
 import com.example.prova.db.UserDatabase;
 import com.example.prova.model.User;
 
-public class CadastroActivity extends AppCompatActivity {
+public class RegisterActivity extends AppCompatActivity {
 
     EditText name;
     EditText password;
@@ -25,7 +25,7 @@ public class CadastroActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_cadastro);
+        setContentView(R.layout.activity_register);
 
         name = findViewById(R.id.name);
         password = findViewById(R.id.password);

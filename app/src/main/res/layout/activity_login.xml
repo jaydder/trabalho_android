@@ -13,23 +13,22 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="144dp"
         android:fontFamily="@font/roboto_thin"
         android:text="@string/login"
         android:textSize="34sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/Logintext"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.23" />
+        app:layout_constraintVertical_bias="0.16" />
 
     <EditText
         android:id="@+id/Logintext"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="40dp"
+        style="@style/radius"
+        android:layout_width="256dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="140dp"
         android:autofillHints=""
         android:ems="10"
         android:hint="@string/username"
@@ -38,16 +37,19 @@
         android:textColor="#cccccc"
         android:textColorHint="#cccccc"
         android:textColorLink="#cccccc"
-        app:layout_constraintBottom_toTopOf="@+id/PasswordText"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.0" />
 
     <EditText
         android:id="@+id/PasswordText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="84dp"
+        style="@style/radius"
+        android:layout_width="256dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="44dp"
         android:autofillHints=""
         android:ems="10"
         android:hint="@string/password"
@@ -55,40 +57,42 @@
         android:minHeight="48dp"
         android:textColor="#CCCCCC"
         android:textColorHint="#CCCCCC"
-        app:layout_constraintBottom_toTopOf="@+id/LoginButton"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Logintext"
+        app:layout_constraintVertical_bias="0.011" />
 
     <Button
         android:id="@+id/LoginButton"
         android:layout_width="178dp"
-        android:layout_height="48dp"
-        android:layout_marginBottom="172dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="44dp"
         android:backgroundTint="#214cce"
         android:onClick="Logar"
         android:text="Login"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PasswordText"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/CadButton"
+        style="@style/bg_transparent"
         android:layout_width="156dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="127dp"
-        android:layout_marginTop="83dp"
         android:layout_marginEnd="128dp"
-        android:layout_marginBottom="41dp"
-        android:backgroundTint="#214cce"
         android:onClick="Cadastrar"
         android:text="Cadastrar-se"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/LoginButton"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.884" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

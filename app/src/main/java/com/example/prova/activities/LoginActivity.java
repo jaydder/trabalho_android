@@ -41,7 +41,6 @@ public class LoginActivity extends AppCompatActivity {
             Intent intent = new Intent(this,DashBoardActivity.class);
             intent.putExtras(bundle);
 
-          //  login_db.get_user_dates(Login.getText().toString());
             UserDates.user = user;
 
             startActivity(intent);
@@ -55,7 +54,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public void Cadastrar(View view) {
-        Intent cadastrar = new Intent(this, CadastroActivity.class);
+        Intent cadastrar = new Intent(this, RegisterActivity.class);
         startActivity(cadastrar);
     }
 }

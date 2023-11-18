@@ -14,6 +14,7 @@ import com.example.prova.R;
 public class DashBoardActivity extends AppCompatActivity {
 
     Button cadPix;
+    Button btn_tranfer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +22,7 @@ public class DashBoardActivity extends AppCompatActivity {
         setContentView(R.layout.activity_dash_board);
 
         cadPix = findViewById(R.id.buttonCadPix);
+        btn_tranfer = findViewById(R.id.buttonTranfer);
         TextView wel = findViewById(R.id.welcome);
         String login = (String) getIntent().getSerializableExtra("login");
 
@@ -34,5 +36,12 @@ public class DashBoardActivity extends AppCompatActivity {
             }
         });
 
+        btn_tranfer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), TransferActivity.class);
+                startActivity(i);
+            }
+        });
     }
 }

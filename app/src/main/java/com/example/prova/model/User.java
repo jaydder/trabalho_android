@@ -7,11 +7,19 @@ import java.io.Serializable;
 public class User implements Serializable {
     private String name;
     private String password;
-
     private String cpf;
     private int celular;
-
     private Integer id;
+
+    private Double balance;
+
+    public Double getBalance() {
+        return balance;
+    }
+
+    public void setBalance(Double balance) {
+        this.balance = balance;
+    }
 
     public String getCpf() {
         return cpf;

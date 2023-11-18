@@ -16,6 +16,7 @@ import com.example.prova.model.UserDates;
 
 import java.util.Objects;
 
+
 public class LoginActivity extends AppCompatActivity {
 
     UserDatabase login_db;
@@ -24,16 +25,13 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-
-        ActionBar actionBar = getSupportActionBar();
-        actionBar.hide();
-
         login_db = new UserDatabase(this);
     }
 
     public void Logar(View view) {
         EditText Login = findViewById(R.id.Logintext);
         EditText Password = findViewById(R.id.PasswordText);
+
         User user = login_db.login(Login.getText().toString(), Password.getText().toString());
 
         if(Objects.nonNull(user)){

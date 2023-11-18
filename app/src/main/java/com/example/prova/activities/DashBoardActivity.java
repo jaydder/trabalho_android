@@ -13,7 +13,7 @@ import com.example.prova.R;
 
 public class DashBoardActivity extends AppCompatActivity {
 
-    Button cadPix;
+    Button btn_register_key;
     Button btn_tranfer;
 
     @Override
@@ -21,18 +21,19 @@ public class DashBoardActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dash_board);
 
-        cadPix = findViewById(R.id.buttonCadPix);
+        btn_register_key = findViewById(R.id.buttonRegisterKey);
         btn_tranfer = findViewById(R.id.buttonTranfer);
+
         TextView wel = findViewById(R.id.welcome);
         String login = (String) getIntent().getSerializableExtra("login");
 
         wel.setText("Bem vindo " + login);
-        cadPix.setOnClickListener(new View.OnClickListener() {
+
+        btn_register_key.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(), CadastrarChaveActivity.class);
+                Intent i = new Intent(getApplicationContext(), KeyRegisterActivity.class);
                 startActivity(i);
-                Log.d("Dash","Intent");
             }
         });
 

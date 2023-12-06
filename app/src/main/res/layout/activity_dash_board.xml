@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@drawable/background_gradient"
     android:layout_height="match_parent"
     tools:context=".activities.DashBoardActivity">
 
@@ -22,27 +23,38 @@
 
         <Button
             android:id="@+id/buttonRegisterKey"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Cadastrar Chave Pix" />
-
-        <Button
-            android:id="@+id/button3"
             android:layout_width="209dp"
             android:layout_height="wrap_content"
-            android:text="Viuzualizar Chaves" />
+            android:backgroundTint="#214cce"
+            android:text="Minha Chave Pix" />
 
         <Button
-            android:id="@+id/button4"
+            android:id="@+id/show_keys"
             android:layout_width="209dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#214cce"
+            android:text="Vizualizar Chaves" />
+
+        <Button
+            android:id="@+id/favorite_keys"
+            android:layout_width="209dp"
+            android:backgroundTint="#214cce"
             android:layout_height="wrap_content"
             android:text="Favoritos" />
 
         <Button
             android:id="@+id/buttonTranfer"
             android:layout_width="209dp"
+            android:backgroundTint="#214cce"
             android:layout_height="wrap_content"
             android:text="Transferencia" />
+
+        <Button
+            android:id="@+id/button_history"
+            android:layout_width="209dp"
+            android:backgroundTint="#214cce"
+            android:layout_height="wrap_content"
+            android:text="extrato" />
     </LinearLayout>
 
     <LinearLayout
@@ -63,7 +75,7 @@
 
         <TextView
             android:id="@+id/welcome"
-            android:layout_width="268dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="34sp"
             android:textStyle="bold" />

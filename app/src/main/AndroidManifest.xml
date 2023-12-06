@@ -9,8 +9,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Prova"
-        >
-
+        android:windowSoftInputMode="adjustPan">
+        <activity
+            android:name=".activities.HistoryActivity"
+            android:windowSoftInputMode="adjustPan"
+            android:exported="false" />
+        <activity
+            android:name=".activities.FavoritesKeysActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.ShowKeysActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".activities.SplashScreenActivity"
             android:exported="true">
@@ -22,19 +32,24 @@
         </activity>
         <activity
             android:name=".activities.RegisterActivity"
+            android:windowSoftInputMode="adjustPan"
             android:exported="false" />
         <activity
             android:name=".activities.KeyRegisterActivity"
+            android:windowSoftInputMode="adjustPan"
             android:exported="false" />
         <activity
             android:name=".activities.DashBoardActivity"
             android:exported="false" />
         <activity
             android:name=".activities.LoginActivity"
+            android:windowSoftInputMode="adjustPan"
             android:exported="false" />
         <activity
             android:name=".activities.TransferActivity"
+            android:windowSoftInputMode="adjustPan"
             android:exported="false" />
+
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />

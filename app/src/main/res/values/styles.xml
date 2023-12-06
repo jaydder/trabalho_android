@@ -10,13 +10,8 @@
     <style name="bg_transparent">
         <item name="android:background">@drawable/backgroung_transparent</item>
     </style>
-
-    <style name="AppTheme.NoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="windowActionBar">false</item>
-
-        <item name="android:background">@drawable/background_gradient</item>
-        <item name="android:statusBarColor">#82d2e3</item>
-        <item name="windowNoTitle">true</item>
+    <style name="btn_default">
+        <item name="android:background">@drawable/btn_default</item>
     </style>
 </resources>
 

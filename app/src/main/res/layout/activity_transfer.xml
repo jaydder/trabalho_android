@@ -9,9 +9,12 @@
 
     <TextView
         android:id="@+id/balance"
-        android:layout_width="138dp"
-        android:layout_height="43dp"
+        android:layout_width="123dp"
+        android:layout_height="82dp"
+        android:fontFamily="@font/roboto_thin"
         android:text="balance"
+        android:textSize="34sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -21,32 +24,35 @@
 
     <Button
         android:id="@+id/button_deposit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Deposit"
+        android:layout_width="178dp"
+        android:layout_height="53dp"
+        android:backgroundTint="#214cce"
+        android:text="Deposito"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.188"
+        app:layout_constraintHorizontal_bias="0.068"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.814" />
 
     <Button
         android:id="@+id/button_transfer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Transfer"
+        android:layout_width="178dp"
+        android:layout_height="53dp"
+        android:backgroundTint="#214cce"
+        android:text="Transferencia"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.785"
+        app:layout_constraintHorizontal_bias="0.931"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.814" />
 
     <EditText
         android:id="@+id/field_key"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="256dp"
+        android:layout_height="53dp"
+        style="@style/radius"
         android:ems="10"
         android:hint="key"
         android:inputType="text"
@@ -54,13 +60,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
+
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.543" />
 
     <EditText
         android:id="@+id/field_value"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="256dp"
+        android:layout_height="53dp"
+        style="@style/radius"
         android:ems="10"
         android:hint="value"
         android:inputType="text"

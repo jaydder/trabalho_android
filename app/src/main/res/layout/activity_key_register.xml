@@ -4,38 +4,71 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background_gradient"
     tools:context=".activities.KeyRegisterActivity">
-
-    <EditText
-        android:id="@+id/chave"
-        android:layout_width="290dp"
-        android:layout_height="59dp"
-        android:layout_marginBottom="64dp"
-        android:ems="10"
-        android:hint="chave"
-        android:inputType="text"
-        app:layout_constraintBottom_toTopOf="@+id/add"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/add"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="244dp"
+        android:layout_width="178dp"
+        android:layout_height="53dp"
+        android:backgroundTint="#214cce"
+
         android:text="Adicionar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.771" />
 
-    <Spinner
-        android:id="@+id/spinnerTipo"
-        android:layout_width="269dp"
-        android:layout_height="49dp"
-        app:layout_constraintBottom_toTopOf="@+id/chave"
+    <ListView
+        android:id="@+id/my_keys"
+        android:layout_width="409dp"
+        android:layout_height="210dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.776" />
+        app:layout_constraintVertical_bias="0.0" />
+
+    <RadioGroup
+        android:id="@+id/radio_gp"
+        android:layout_width="274dp"
+        android:layout_height="92dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.377">
+
+        <RadioButton
+            android:id="@+id/radio_cpf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CPF" />
+
+        <RadioButton
+            android:id="@+id/radio_celular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Celular" />
+
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/chave"
+        style="@style/radius"
+        android:layout_width="256dp"
+        android:layout_height="53dp"
+        android:ems="10"
+        android:hint="chave"
+        android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.564" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
